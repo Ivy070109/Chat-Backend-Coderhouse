@@ -1,0 +1,7 @@
+Desde ahora no usaremos el conocido script npm start, tendremos dos, uno para desplegar en producción nuestro proyecto y otro para desarrollarlo.
+Nuestro script en gral es: 
+    "nodemon ./src/app.js"
+Pero cuando queremos desplegar algo en producción lo hacemos con node, no con nodemon, por lo que debemos configurar que tengamos dos tipos de scripts.
+    "start": "node ./src/app.js", /ejecuta en producción
+    "dev": "nodemon ./src/app.js" /ejecuta en desarrollo
+De ésta manera cuando ejecutemos npm run dev, se desplegará nodemon. Y si ejecutamos npm start entrará en acción node
